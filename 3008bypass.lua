@@ -1,5 +1,5 @@
-local event = require(game:service'Players'.LocalPlayer.PlayerGui.MainPlayerInformation).PickupEvent
 local plr = game:service'Players'.LocalPlayer
+local event = require(plr.PlayerGui.MainPlayerInformation).PickupEvent
 local old
 old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
     if self ~= event and getnamecallmethod() ~= "InvokeServer" then
